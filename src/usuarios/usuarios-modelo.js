@@ -8,7 +8,6 @@ class Usuario {
     this.id = usuario.id;
     this.nome = usuario.nome;
     this.email = usuario.email;
-    this.senha = usuario.senha;
     this.senhaHash = usuario.senhaHash;
 
     this.valida();
@@ -33,29 +32,27 @@ class Usuario {
   valida() {
     validacoes.campoStringNaoNulo(this.nome, 'nome');
     validacoes.campoStringNaoNulo(this.email, 'email');
-   
   }
 
-  
   async deleta() {
     return usuariosDao.deleta(this);
   }
-  
+
   static async buscaPorId(id) {
     const usuario = await usuariosDao.buscaPorId(id);
     if (!usuario) {
       return null;
     }
-    
+
     return new Usuario(usuario);
   }
-  
+
   static async buscaPorEmail(email) {
     const usuario = await usuariosDao.buscaPorEmail(email);
     if (!usuario) {
       return null;
     }
-    
+
     return new Usuario(usuario);
   }
 
@@ -63,14 +60,10 @@ class Usuario {
     return usuariosDao.lista();
   }
 
-  static gerarSenhaHash() {
-    const custoHAsh = 12;
-    return bcrypt.hash(senha, custoHAsh);
-    
+  static gerarSenhaHash(senha) {
+    const custoHash = 12;
+    return bcrypt.hash(senha, custoHash);
   }
-
-
-
-} 
+}
 
 module.exports = Usuario;
