@@ -40,6 +40,15 @@
 09. criar validações
 
    <img src="./img/04.png" width="500px" >
-10.
+10.Refatorar arquivos usuarios-dao.js 
+
+   <img src="./img/05.png" width="500px" >
+12. modificar arqvos database.js modificar esquema
+
+   <img src="./img/06.png" width="500px" >
+13. modificar controlador (/src/usuario/usuarios-controladores.js) e aidiocnado método adicionar
+
+   <img src="./img/07.png" width="500px" >
+14. 
 
 <
