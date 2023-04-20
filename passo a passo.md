@@ -1,7 +1,7 @@
 # Blog do código
 
 1. Ajuste do package.js
-2. instalação das dependecnias abaixo:
+2. instalação das dependência abaixo:
 
    npm install body-parser@1.19.0
 
@@ -30,9 +30,10 @@
 5. Criar método static gerarSenha
 
    <img src="./img/01.png" width="500px" >
-06. importar bycrpt
-07. Criar um metodo de adicionaSenha dentro (./src/usuario/usuario-modelo)
-   
+
+6. importar bycrpt
+7. Criar um metodo de adicionaSenha dentro (./src/usuario/usuario-modelo)
+
    <img src="./img/02.png" width="500px" >
 08. Incluir dentro do contructor
 
