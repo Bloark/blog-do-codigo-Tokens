@@ -66,6 +66,7 @@
 21. retorno de estatus dentro da pasta usuario-controlador
 
    <img src="./img/10.png" width="500px" >
-22. 
+22. criação de nova rota dentro de usuario-rotas.js
+   <img src="./img/11.png" width="500px" >
 
 <
