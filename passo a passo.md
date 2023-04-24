@@ -63,5 +63,9 @@
    <img src="./img/09.png" width="500px" >
 19. exportação do modulo estrategias-autenticancao dentro index na pats usuario.
 20. incialização de estretgria-autenticação dentro do arquivo app.js
+21. retorno de estatus dentro da pasta usuario-controlador
+
+   <img src="./img/10.png" width="500px" >
+22. 
 
 <
