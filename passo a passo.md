@@ -61,6 +61,7 @@
 18. configuração das funções de verificaUsuario e VerfificarSenha
    
    <img src="./img/09.png" width="500px" >
-19. exportação do modulo estrategias-autenticancao dentro index na pats usuario
+19. exportação do modulo estrategias-autenticancao dentro index na pats usuario.
+20. incialização de estretgria-autenticação dentro do arquivo app.js
 
 <
