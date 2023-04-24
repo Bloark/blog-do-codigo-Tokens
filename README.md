@@ -1,6 +1,6 @@
 # Blog do Código (Autenticação com tokens)
 
- É blog onde programadoras e programadores podem discutir e fazer post sobre os últimos acontecimentos do mundo do sistema de software. E, para termos um enfoque maior aqui no conteúdo do nosso curso, essa API já vai começar com algumas funcionalidades: vamos poder adicionar, listar e deletar usuários e adicionar e listar posts.
+É blog onde programadoras e programadores podem discutir e fazer post sobre os últimos acontecimentos do mundo do sistema de software. E, para termos um enfoque maior aqui no conteúdo do nosso curso, essa API já vai começar com algumas funcionalidades: vamos poder adicionar, listar e deletar usuários e adicionar e listar posts.
 
 ## 🚀 Começando
 
@@ -22,7 +22,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ## Testes
 
-* Foi usado o Insonia e postman para realizaer os testes através do métodos CRUD. (Create, Read, Update e Delete)
+* Foi usado o Insonia e postman para realizar os testes através do métodos CRUD. (Create, Read, Update e Delete)
 
 ### 🔧 Instalação
 
