@@ -35,7 +35,8 @@
 7. Criar um metodo de adicionaSenha dentro (./src/usuario/usuario-modelo)
 
    <img src="./img/02.png" width="500px" >
-08. Incluir dentro do contructor
+
+8. Incluir dentro do contructor
 
    <img src="./img/03.png" width="500px" >   
 09. criar validações
@@ -50,6 +51,16 @@
 13. modificar controlador (/src/usuario/usuarios-controladores.js) e aidiocnado método adicionar
 
    <img src="./img/07.png" width="500px" >
-14. 
+14. Instalação do npm install passport@0.4.1
+15. npm install passport-local@1.0.0
+16. configuração do da estrategia da configuração
+16. criação do arquivo estrategias-autenticacao.js dentro de ./src/usuarios
+17. configuração da stretegia de configuração
+   
+   <img src="./img/08.png" width="500px" >
+18. configuração das funções de verificaUsuario e VerfificarSenha
+   
+   <img src="./img/09.png" width="500px" >
+19.
 
 <

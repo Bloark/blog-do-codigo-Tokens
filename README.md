@@ -34,7 +34,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 Mencione as ferramentas que você usou para criar seu projeto
 
 * [NPM](https://docs.npmjs.com/) - Gerenciado de pacotes
-* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Gerenciado de pacotes
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Linguagem de programção
+* [JSON WEB TOKEN](https://jwt.io/introduction) - Verificador de integrigade com tokens
 
 ## ✒️ Autores
 
