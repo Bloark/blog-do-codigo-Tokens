@@ -39,7 +39,8 @@
 8. Incluir dentro do contructor
 
    <img src="./img/03.png" width="500px" >   
-09. criar validações
+
+9. criar validações
 
    <img src="./img/04.png" width="500px" >
 10.Refatorar arquivos usuarios-dao.js 
@@ -56,10 +57,10 @@
 16. configuração do da estrategia da configuração
 16. criação do arquivo estrategias-autenticacao.js dentro de ./src/usuarios
 17. configuração da stretegia de configuração
-   
+
    <img src="./img/08.png" width="500px" >
 18. configuração das funções de verificaUsuario e VerfificarSenha
-   
+
    <img src="./img/09.png" width="500px" >
 19. exportação do modulo estrategias-autenticancao dentro index na pats usuario.
 20. incialização de estretgria-autenticação dentro do arquivo app.js
@@ -67,6 +68,12 @@
 
    <img src="./img/10.png" width="500px" >
 22. criação de nova rota dentro de usuario-rotas.js
+   
    <img src="./img/11.png" width="500px" >
+23. instalação do npm install jsonwebtoken@8.5.1
+24. Criar uma função criaTokenJWT dentro de /src/usuario/usuarios-controlador.js
+
+   <img src="./img/12.png" width="500px" >
+25. denttro da função de
 
 <
