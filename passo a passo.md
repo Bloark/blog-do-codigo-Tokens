@@ -182,6 +182,37 @@ module.exports = app => {
    
    <img src="./img/13.png" width="500px" >
 
-37. 
+37. Tratando erros de tokens
+
+38. adicionado tratamento de erro para token no Middlewares.
+
+```js
+    bearer: (req, res, next) => {
+            passport.authenticate(
+                'bearer',
+                { session: false },
+                (erro, usuario, info) => {
+
+                    if (erro && erro.name === 'JsonWebTokenError') {
+                        return res.status(401).json({ erro: erro.message });
+                    }
+
+                    if (erro) {
+                        return res.status(500).json({erro: erro.message})
+                    }
+
+                    if (!usuario) {
+                        return res.status(401).json();
+                    }
+
+                    req.user = usuario;
+                    return next();
+
+                }
+            )(req,res,next)
+        }
+  ```
+
+  39. 
 
 <
