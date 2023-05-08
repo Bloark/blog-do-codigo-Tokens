@@ -103,7 +103,7 @@ app.listen(port, () => console.log(`App listening on port ${port}`));
 30. instalação do npm install passport-http-bearer@1.0.1
 31. configurado a a strategia de configuração do Bearer Token
 
-~~~
+```js
   passport.use(
     new BearerStrategy(
       async (token, done) => {
@@ -120,10 +120,10 @@ app.listen(port, () => console.log(`App listening on port ${port}`));
       }
     )
   )
-~~~
+```
 
 32. Inserir estretegias nas rotas posts-rotas.js
-~~~
+```js
 module.exports = app => {
   app
     .route('/post')
@@ -133,8 +133,55 @@ module.exports = app => {
       postsControlador.adiciona
     );
 };
-~~~
+```
 
 33. inserir na rota de usuario.
+```js
+    app
+      .route('/usuario/:id')
+      .delete(
+        passport.authenticate('bearer', { session: false}),
+        usuariosControlador.deleta
+    );
+  };
+```
+
+34. Tratando erros no login
+35. criado o arquivo middlewares-autenticacao.js
+```js
+    const passport = require('passport');
+
+    module.exports = {
+        local: (req, res, next) => {
+                    
+            passport.authenticate(
+                'local',
+                { session: false },
+                (erro, usuario, info) => {
+                    if (erro && erro.name === 'InvalidArgumentError') {
+                        return res.status(401).json({ erro: erro.message });
+
+                    }
+
+                    if (erro) {
+                        return res.status(500).json({ erro: erro.message });
+                    }
+
+                    if (!usuario) {
+                        return res.status(401).json();
+                    }
+                    req.user = usuario;
+                    return next();
+                }
+            )(req, res, next);
+        }
+    };
+```
+
+36. adicionado rota nova criada
+   
+   <img src="./img/13.png" width="500px" >
+
+37. 
 
 <

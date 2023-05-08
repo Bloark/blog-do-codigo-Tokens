@@ -1,4 +1,5 @@
 const postsControlador = require('./posts-controlador');
+const passport = require('passport');
 
 module.exports = app => {
   app
