@@ -218,5 +218,10 @@ module.exports = app => {
 39. adicionado ono index.
 40. adicionado na rota posts-rotas.js
 41. Expirando Token
+42. modificado propriedade dentro do usuario-controlador para expirar token em 15 minutos.
+
+```js
+const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '15m' } );
+```
 
 <
