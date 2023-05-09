@@ -38,8 +38,7 @@ module.exports = {
                 if (erro && erro.name === 'TokenExpiredError') {
                     return res
                         .status(401)
-                        .json({ erro: erro.message, expiradoEm: erro.expiredAt });    
-                                
+                        .json({ erro: erro.message, expiradoEm: erro.expiredAt });                               
                 }
 
                 if (erro) {
@@ -56,7 +55,4 @@ module.exports = {
             }
         )(req,res,next)
     }
-
-
-
 };

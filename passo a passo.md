@@ -221,7 +221,21 @@ module.exports = app => {
 42. modificado propriedade dentro do usuario-controlador para expirar token em 15 minutos.
 
 ```js
-const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '15m' } );
+const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '1s' } );
 ```
+
+43. adicionado erro de expoiração no middleware de autenticação.
+
+```js
+   if (erro && erro.name === 'TokenExpiredError') {
+                    return res
+                        .status(401)
+                        .json({ erro: erro.message, expiradoEm: erro.expiredAt });                               
+                }
+
+```
+44. instalando o redis para gerenciara uma lista de black list de token
+45. npm install redis@3.0.2
+46. criando a base para recebr o redis diretorio raiz blacklist.js
 
 <
