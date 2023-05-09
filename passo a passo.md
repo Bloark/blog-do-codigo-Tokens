@@ -60,7 +60,7 @@
 17. configuração da stretegia de configuração
 
    <img src="./img/08.png" width="500px" >
-   
+
 18. configuração das funções de verificaUsuario e VerfificarSenha
 
    <img src="./img/09.png" width="500px" >
@@ -123,6 +123,7 @@ app.listen(port, () => console.log(`App listening on port ${port}`));
 ```
 
 32. Inserir estretegias nas rotas posts-rotas.js
+
 ```js
 module.exports = app => {
   app
@@ -136,6 +137,7 @@ module.exports = app => {
 ```
 
 33. inserir na rota de usuario.
+
 ```js
     app
       .route('/usuario/:id')
@@ -148,6 +150,7 @@ module.exports = app => {
 
 34. Tratando erros no login
 35. criado o arquivo middlewares-autenticacao.js
+
 ```js
     const passport = require('passport');
 
@@ -179,11 +182,10 @@ module.exports = app => {
 ```
 
 36. adicionado rota nova criada
-   
+
    <img src="./img/13.png" width="500px" >
 
 37. Tratando erros de tokens
-
 38. adicionado tratamento de erro para token no Middlewares.
 
 ```js
@@ -211,8 +213,10 @@ module.exports = app => {
                 }
             )(req,res,next)
         }
-  ```
+```
 
-  39. 
+39. adicionado ono index.
+40. adicionado na rota posts-rotas.js
+41. Expirando Token
 
 <
