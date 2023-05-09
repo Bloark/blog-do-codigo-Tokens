@@ -236,6 +236,38 @@ const token = jwt.sign(payload, process.env.CHAVE_JWT, { expiresIn: '1s' } );
 ```
 44. instalando o redis para gerenciara uma lista de black list de token
 45. npm install redis@3.0.2
-46. criando a base para recebr o redis diretorio raiz blacklist.js
+46. criando a base para receber o redis diretorio raiz blacklist.js
+47. criando metodo para manipular redis.
+```js
+const blacklist = require('./blacklist');
+
+const { promosify } = require('util')
+const existsAsync = promosify(blacklist.exists).bind(blacklist);
+const setAsync = promosify(blacklist.set).bind(blacklist);
+const jwt = require('jsonwebtoken')
+const { createHash } = require('crypto');
+
+function geraTokenHash(token) {
+    return createHash('sha256').update(token).digest('hex');
+}
+
+module.exports = {
+    adiciona: async token => {
+        const dataExpiracao = jwt.decode(token).exp;
+        const tokenHash = geraTokenHash(token);
+        await setAsync(tokenHash, '');
+        blacklist.expireat(tokenHash, dataExpiracao)
+    },
+    contemToken: async token => {
+        const tokenHash = geraTokenHash(token);
+        const resultado = await existsAsync(tokenHash);
+        return resultado === 1;
+    }
+
+}
+
+
+
+```
 
 <
