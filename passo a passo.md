@@ -265,9 +265,8 @@ module.exports = {
     }
 
 }
-
-
-
 ```
+
+48. criara função verifica token blackList.
 
 <
